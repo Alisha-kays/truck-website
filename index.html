@@ -1,251 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truck website</title>
-</head>
-<body>
-   
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kays Logistics - Home</title>
+  <style>
     body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f7fa;
-  color: #333;
-}
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #333;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/335/original/UD_condor_680.jpg?1753724869') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      background: #ffcc00;
+      color: #1a3c6b;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .hero a:hover {
+      background: #e6b800;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #1a3c6b;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    /* Services Preview */
+    .services-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .service-card {
+      background: #1a3c6b;
+      color: white;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      margin-top: 10px;
+      color: #ffcc00;
+    }
+    /* Why Choose Us */
+    .why-choose {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .why-choose div {
+      background: #eaf1fb;
+      padding: 20px;
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #1a3c6b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 5%;
-  background: rgba(10, 61, 98, 0.9);
-  color: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-.logo {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 8px 15px;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-.nav-links a:hover {
-  background: #ffd32a;
-  color: #0a3d62;
-}
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* Hero Banner with Truck Background */
-.hero-banner {
-  background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/335/original/UD_condor_680.jpg?1753724869") no-repeat center center/cover;
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-  padding: 0 20px;
-}
-.hero-banner h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-.hero-banner p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-.hero-banner .btn {
-  background: #ffd32a;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #0a3d62;
-  transition: 0.3s;
-}
-.hero-banner .btn:hover {
-  background: #ffa502;
-  color: white;
-}
-
-/* Sections */
-section {
-  padding: 60px 10%;
-  text-align: center;
-}
-.about p {
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-}
-
-/* Services */
-.service-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 30px;
-}
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-}
-.card i {
-  font-size: 2rem;
-  color: #0a3d62;
-  margin-bottom: 15px;
-}
-
-/* Contact */
-.contact p {
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.contact .btn {
-  background: #0a3d62;
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.contact .btn:hover {
-  background: #ffd32a;
-  color: #0a3d62;
-}
-
-/* Footer */
-footer {
-  background: #0a3d62;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-footer .socials a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.2rem;
-  transition: 0.3s;
-}
-footer .socials a:hover {
-  color: #ffd32a;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    display: block;
-    margin: auto 0;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 5%;
-    background: #0a3d62;
-    width: 200px;
-    border-radius: 8px;
-    padding: 15px;
-  }
-  .nav-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: block;
-  }
-  .hero-banner h1 {
-    font-size: 2rem;
-  }
-  .hero-banner p {
-    font-size: 1rem;
-  }
-  .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Modal Styles */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    justify-content: center;
-    background: rgba(223, 216, 216, 0.7); 
-}
-/* Modal Box */
-.modal-content {
-    background-color: #fff;
-    padding: 30px;
-    width: 80%; 
-    max-width: 500px;
-    text-align: left;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    border-radius: 10px;
-    position: relative;
-    animation: slideIn 0.3s ease;
-}
-
-.modal-content button {
-    background: #0d47a1;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-/*Form styling*/
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-button {
+    button {
     background: #f9a825;
     color: white;
     border: none;
@@ -257,182 +121,199 @@ button {
 button:hover {
     background: #e68900;
 }
+    
+      /* Quote Form Styling */
+.quote-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f4f9ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
 }
-</style>
 
-    <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">🚛 The Kays Logistics</div>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="about-page.html">About Us</a></li>
-        <li><a href="services-page.html">Services</a></li>
-        <li><a href="contact-page.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+.quote-section h1 {
+  color: #0d1b4c;
+  margin-bottom: 10px;
+}
 
-  <!-- Hero Section with Truck Background -->
-  <section class="hero-banner">
-    <h1>Moving Heavy Loads, <br> Lightening Your Worries.</h1>
-    <p>Your trusted partner in freight transportation & logistics solutions.</p>
-    <button class="btn" onclick="openForm()">Get a Quote</button>
+.quote-section p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.quote-form label {
+  font-weight: bold;
+  color: #0d1b4c;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.quote-form button {
+  padding: 12px;
+  background: #0d1b4c;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.quote-form button:hover {
+  background: #152d75;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Welcome to Kays Logistics</h1>
+  <div class="menu-toggle" id="menu-toggle"></div>
+  <p>Reliable Trucking & Logistics Solutions You Can Trust</p>
+  <button class="btn" onclick="openform()"> Get a Quote </button>
+</div>
+
+<section class="quote-section">
+  <span class="close-button" onclick="closeForm()" id="close-button">&times;</span>
+    <h1>Request a Quote</h1>
+    <p>Fill out the form below and our team will get back to you with a customized quote.</p>
+
+    <form class="quote-form" action="https://wa.me/27659881654" method="get" target="_blank" onsubmit="alert('Thank you for your request! We will get back to you shortly.');">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+    <br>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+    <br>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+27 68 785489053" required>
+<br>
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <br>
+        <option value="">-- Choose a service --</option>
+        <option value="local">Local Hauling</option>
+        <option value="long-distance">Long Distance Trucking</option>
+        <option value="scheduled">Scheduled Deliveries</option>
+        <option value="removals">At home removals</option>
+      </select>
+      <br>
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" rows="4" placeholder="Describe your cargo, pickup & drop-off locations..."></textarea>
+
+      <button type="submit">Get My Quote</button>
+    </form>
   </section>
-    <!--- Quote Form Modal-->
-      <div id="quote-modal" class="modal">
-        <div class="modal-content">
-          <span class="close-button" onclick="closeForm()" id="close-button">&times;</span>
-          <h2>Request a Quote</h2>
-          <form action="https://wa.me/27659881654" method="get" target="_blank" onsubmit="alert('Thank you for your request! We will get back to you shortly.');">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
 
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label >What do you need transported?</label>
-            <input type="text" name="item" id="item" required>
-            
-            <label for="details">Additional Details:</label>
-            <textarea name="details" id="details" rows="4" required></textarea>
-            
-            <button type="submit" class="btn">Submit Request</button>
-          </form>
-        </div>
+<!-- About Preview -->
+<section>
+  <h2>About Us</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    For over 4 years, Kays Logistics has been providing safe, efficient, and affordable
+    trucking solutions across the country. Our dedicated team ensures your goods are
+    delivered on time and with care.
+  </p>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="about-page.html" style="color:#1a3c6b; font-weight:bold;">Read More →</a>
+  </div>
+</section>
 
-      </div>
-
-  <!-- About -->
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      Optimize your supply chain with our smart logistics solutions that connect every part of your process, 
-      reducing delays and costs. We offer a wide range of services including freight transportation, warehousing, and distribution. 
-      Our dedicated team ensures your goods are delivered safely and on time.
-    </p>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="services">
-    <h2>Our Services</h2>
-    <div class="service-cards">
-      <div class="card">
-        <i class="fas fa-truck"></i>
-        <h3>🚚Freight Transportation</h3>
-        <p>Reliable local, regional, and national freight solutions to move your goods safely and on time.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-warehouse"></i>
-        <h3>📦Distribution</h3>
-        <p>Safe and efficient warehousing & distribution services tailored to your business needs.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>📊Logistics Consulting</h3>
-        <p>Expert consulting services to optimize your supply chain and reduce costs.</p>
-      </div>
+<!-- Services Preview -->
+<section>
+  <h2>Our Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      🚚 <h3>Local Hauling</h3>
+      <p>Same day pick ups across town</p>
     </div>
-  </section>
+    <div class="service-card">
+      🚛 <h3>Long Distance Trucking</h3>
+      <p>Reliable transport for goods nationwide</p>
+    </div>
+    <div class="service-card">
+      ⏱️ <h3>Scheduled Deliveries</h3>
+      <p>Timely and regular deliveries for your business</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:20px;">
+    <a href="services-page.html" style="color:#1a3c6b; font-weight:bold;">View All Services →</a>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Need a quote or want to learn more about our services? Get in touch with us today.</p>
-    <a href="thekayslogistics@gmail.com" class="btn">Email Us</a>
-  </section>
+<!-- Why Choose Us -->
+<section>
+  <h2>Why Choose Us</h2>
+  <div class="why-choose">
+    <div>✅ Experienced team</div>
+    <div>📡 Real-time tracking</div>
+    <div>💲 No hidden fees</div>
+    <div>📞 24/7 Support</div>
+    <div>🛡️ Safety & compliance</div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 The Kays Logistics. All rights reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer>
+  <p>© 2025 The Kays Logistics. All rights reserved.</p>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about-page.html">About Us</a>
+    <a href="services-page.html">Services</a>
+    <a href="contact-page.html">Contact Us</a>
+  </nav>
+</footer>
 
-    <script>
+<script>
+      document.getElementById("quote-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop form from refreshing the page
 
-        //Whatsapp submission
-function sendToWhatsApp() {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let item = document.getElementById("item").value;
-    let details = document.getElementById("details").value;
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let service = document.getElementById("service").value;
+  let details = document.getElementById("details").value;
 
-    let message = `Hello, my name is ${name}. I would like to request a quote for transporting ${item}. You can reach me at ${email} or ${phone}. Additional details: ${details}`;
-    let whatsappNumber = "27659881654"; // Replace with your phone number\
+  // Build WhatsApp message
+  let message = `Hello, my name is ${name}. 
+I would like to request a quote for: ${service}.
+You can reach me at ${email} or ${phone}.
+Additional details: ${details}`;
 
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
-    return false; // Prevent form submission
-}
+  // WhatsApp number (your company’s number)
+  let whatsappNumber = "27659881654"; 
 
-        //Email submission
-   document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-    fetch('https://formspree.io/f/xwpneqwa', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            item: document.getElementById('item').value,
-            details: document.getElementById('details').value
-        })
-    }).then(response => {
-        if (response.ok) {
-            alert('Thank you for your request! We will get back to you shortly.');
-            closeModal();
-            document.querySelector('form').reset(); // Reset form fields
-        } else {
-            alert('There was a problem submitting your request. Please try again.');
-        }
-    }).catch(error => {
-        alert('There was a problem submitting your request. Please try again.');
-    });
+  // Show thank you message
+  alert("✅ Thank you for submitting your request! Redirecting you to WhatsApp...");
+
+  // Open WhatsApp with pre-filled message
+  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank");
+
+  // Reset form fields
+  document.getElementById("quote-form").reset();
+
+  // Close modal (quote-section)
+  document.getElementById("quote-section").style.display = "none";
 });
 
-        
-    // Get modal, button, and close button
-
-var modal = document.getElementById("quote-modal");
-var btn = document.querySelector(".btn"); // first "Get Quote" button
-var closeBtn = document.querySelector(".close-button");
-
-// Open modal on button click
-btn.onclick = function(e) {
-    e.preventDefault(); // prevent link behavior if <a>
-    modal.style.display = "flex";
-}
-
-// Close modal on X click
-closeBtn.onclick = function(e) {
-    modal.style.display = "none";
-}
-
-// Close modal if user clicks outside modal
-window.onclick = function(e) {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-}
-
-
-       const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
     </script>
-    
 </body>
 </html>
-           
-
