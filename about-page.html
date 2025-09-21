@@ -1,82 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Kays Logistics</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
+      color: #333;
+    }
+    header {
+      background: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/335/original/UD_condor_680.jpg?1753724869') center/cover no-repeat;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #1a3c6b;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .why-choose-us ul {
+      list-style: none;
+      padding: 0;
+    }
+    .why-choose-us li {
+      margin: 10px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+    .why-choose-us li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #1a3c6b;
+      font-weight: bold;
+    }
+    footer {
+      background: #1a3c6b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <style>
-        body {
-            background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
-            padding: auto;
-            margin: 0;
-        }
-        h2 {
-            text-align: inherit;
-            color: #272044;
-            font-size: 2em;
-            margin-top: 20px;
-        }
-        h1 {
-            text-align: center;
-            color: #272044;
-            font-size: 2.5em;
-            margin-top: 20px;
-        }
-        #tabs-top {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        #tabs-top a {
-            text-decoration: none;
-            color: #272044;
-            font-weight: bold;
-        }
-        #tabs-top a:hover {
-            color: #0a5566;
-        }
-    </style>
-    <div>
-        <h1>About us</h1>
-        <hr>
-        <section>
-        <p>The Kays Logistics have been in the business fo about 4 years and as a business , we have managed to deliver our services to many companies and 
-            the feedback has been great. We have a team of dedicated professionals who are committed to providing the best service possible. Our goal is to ensure that your goods are delivered safely and on time.
-        </p>
 
-        <h2>Our Mission</h2>
-        
-        <strong>
-            "Our mission is to continue to provide reliable, efficient and affordable trucking solutions
-            that keep our clients cargo moving and teir businesses thriving."
-        </strong>
-        
-        <h2>Why Choose Us</h2>
-        <ul>
-            <li>Experienced team with a proven track record</li>
-            <li>State-of-the-art tracking technology</li>
-            <li>Competitive pricing with no hidden fees</li>
-            <li>24/7 customer support for all your needs</li>
-            <li>Commitment to safety and compliance</li>
-        </ul>
-      </section>
-      <br>
-      <br>
-      
-        <div id="tabs-top">
-            <a href="home-page.html">Home</a>
-            <a href="about-page.html">About us</a>
-            <a href="contact-page.html">Contact us</a>
-            <a href="#">Services</a>
-        </div>
-    </div>
-<br>
-<br>
-    <footer>
-        <p>&copy; 2025 The Kays Logistics . All rights reserved.</p>
-      </footer>
+<header>
+  <h1>About Us</h1>
+  <p>Reliable Trucking & Logistics Solutions</p>
+</header>
+
+<section>
+  <h2>Our Mission</h2>
+  <p>Our mission is to continue to provide reliable, efficient, and affordable trucking solutions 
+     that keep our clients’ cargo moving and their businesses thriving.</p>
+</section>
+
+<section class="why-choose-us">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>Experienced team with a proven track record</li>
+    <li>We also do removals</li>
+    <li>Competitive pricing with no hidden fees</li>
+    <li>24/7 customer support for all your needs</li>
+    <li>Commitment to safety and compliance</li>
+  </ul>
+</section>
+
+<footer>
+  <p>© 2025 The Kays Logistics. All rights reserved.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-page.html">About Us</a>
+    <a href="services-page.html">Services</a>
+    <a href="contact-page.html">Contact Us</a>
+  </nav>
+</footer>
+
 </body>
 </html>
+
+
